@@ -4,44 +4,32 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Use bat for Windows, sh for Unix-like systems
-                bat '''
-                echo "Building..."
-                REM Add your Windows build commands here
-                '''
+                echo 'Building...'
+                // Add your build commands here
             }
         }
         stage('Test') {
             steps {
-                // Use bat for Windows, sh for Unix-like systems
-                bat '''
-                echo "Testing..."
-                REM Add your Windows test commands here
-                '''
+                echo 'Testing...'
+                // Add your test commands here
             }
         }
         stage('Deploy') {
             steps {
-                // Use bat for Windows, sh for Unix-like systems
-                bat '''
-                echo "Deploying..."
-                REM Add your Windows deployment commands here
-                '''
+                echo 'Deploying...'
+                // Add your deployment commands here
             }
         }
     }
     
     post {
         success {
-            // This block will be executed if the pipeline succeeds
             echo 'Pipeline succeeded! 🎉'
         }
         failure {
-            // This block will be executed if the pipeline fails
             echo 'Pipeline failed! 😞'
         }
         always {
-            // This block will always be executed regardless of the pipeline result
             echo 'Pipeline completed!'
         }
     }
