@@ -4,20 +4,29 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Replace this with your build commands
-                sh 'echo "Building..."'
+                // Use bat for Windows, sh for Unix-like systems
+                bat '''
+                echo "Building..."
+                REM Add your Windows build commands here
+                '''
             }
         }
         stage('Test') {
             steps {
-                // Replace this with your test commands
-                sh 'echo "Testing..."'
+                // Use bat for Windows, sh for Unix-like systems
+                bat '''
+                echo "Testing..."
+                REM Add your Windows test commands here
+                '''
             }
         }
         stage('Deploy') {
             steps {
-                // Replace this with your deployment commands
-                sh 'echo "Deploying..."'
+                // Use bat for Windows, sh for Unix-like systems
+                bat '''
+                echo "Deploying..."
+                REM Add your Windows deployment commands here
+                '''
             }
         }
     }
