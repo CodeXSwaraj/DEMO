@@ -1,11 +1,39 @@
 pipeline {
     agent any
-
+    
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                // Replace this with your build commands
+                sh 'echo "Building..."'
             }
+        }
+        stage('Test') {
+            steps {
+                // Replace this with your test commands
+                sh 'echo "Testing..."'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // Replace this with your deployment commands
+                sh 'echo "Deploying..."'
+            }
+        }
+    }
+    
+    post {
+        success {
+            // This block will be executed if the pipeline succeeds
+            echo 'Pipeline succeeded! 🎉'
+        }
+        failure {
+            // This block will be executed if the pipeline fails
+            echo 'Pipeline failed! 😞'
+        }
+        always {
+            // This block will always be executed regardless of the pipeline result
+            echo 'Pipeline completed!'
         }
     }
 }
